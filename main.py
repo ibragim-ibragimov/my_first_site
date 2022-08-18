@@ -12,7 +12,7 @@ def index():
     
     return render_template('index.html')
 
-@app.route("/dns", methods = ['GET', 'POST'])
+@app.route("/5e91da9822234b33b8affd196936a178", methods = ['GET', 'POST'])
 def page():
 
     address = None
@@ -23,7 +23,7 @@ def page():
     return """
      <html>
        <body>""" + "Result:\n<br>\n" + (str(subprocess.check_output(cmd, shell=True)) if address else "") + """
-          <form action = "/dns" method = "POST">
+          <form action = "/5e91da9822234b33b8affd196936a178" method = "POST">
              <p><h3>Enter address</h3></p>
              <p><input type = 'text' name = 'address'/></p>
              <p><input type = 'submit' value = 'Lookup'/></p>
